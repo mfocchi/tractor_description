@@ -9,11 +9,11 @@
     <xacro:property name="mass" value="4" />
 
     <link name="front_${left_right}_wheel">
-        <!-- <visual>
+       <visual>
             <geometry>
                 <cylinder radius="${radius}" length="${length}" />
             </geometry>
-        </visual> -->
+        </visual>  
         <collision>
             <geometry>
                 <cylinder radius="${radius}" length="${length}" />
@@ -36,7 +36,7 @@
 	<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         </joint>
         <actuator name="motor_front_${left_right}_wheel">
-        <mechanicalReduction>100</mechanicalReduction>
+        <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
 

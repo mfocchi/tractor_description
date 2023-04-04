@@ -429,11 +429,11 @@
     </joint>
 
     <link name="ruota_motrice2">
-      <!-- <inertial>
+      <inertial>
         <origin xyz="0.26377726016691 0.128486306304607 -0.043300885340771" rpy="0 0 0" />
         <mass value="0.352270876846932" />
         <inertia ixx="0.000552782855065526" ixy="-1.57290978416372E-18" ixz="3.14137307635142E-21" iyy="0.000552782855065525" iyz="-1.8574920937579E-21" izz="0.00108208098500792" />
-      </inertial> -->
+      </inertial> 
       <visual>
         <origin xyz="0 0 0"  rpy="0 0 0" />
         <geometry>
