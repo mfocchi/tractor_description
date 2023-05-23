@@ -97,12 +97,12 @@
         </geometry>
         <material name="grey"/>
       </visual>
-      <collision>
+      <!--collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <mesh filename="package://tractor_description/meshes/meshes1/cingolo1.STL" />
         </geometry>
-      </collision>
+      </collision-->
     </link>
 
     <joint name="cingolo1_joint" type="fixed">
@@ -296,12 +296,12 @@
         </geometry>
         <material name="grey"/>
       </visual>
-      <collision>
+      <!--collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
           <mesh filename="package://tractor_description/meshes/meshes2/cingolo2.STL" />
         </geometry>
-      </collision>
+      </collision-->
     </link>
 
     <joint name="cingolo2_joint"  type="fixed">
