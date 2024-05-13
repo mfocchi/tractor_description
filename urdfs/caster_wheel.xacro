@@ -3,12 +3,12 @@
 
 <xacro:include filename="$(find tractor_description)/urdfs/cylinder_inertia.xacro"/>
 
-<xacro:macro name="front_wheel" params="left_right radius length position">
+<xacro:macro name="caster_wheel" params="name translateX translateY radius length">
 
         
-    <xacro:property name="mass" value="4" />
+    <xacro:property name="mass" value="0.5" />
 
-    <link name="front_${left_right}_wheel">
+    <link name="${name}_caster_wheel">
        <visual>
             <geometry>
                 <cylinder radius="${radius}" length="${length}" />
@@ -22,26 +22,17 @@
         <xacro:cylinder_inertia mass="${mass}" radius="${radius}" length="${length}"/>
     </link>
 
-    <joint name="front_${left_right}_wheel_joint" type="continuous">
-        <origin xyz="0.0 ${position} -0.17" rpy=" -1.57 0 0" />
+    <joint name="${name}_caster_wheel_joint" type="continuous">
+        <origin xyz="${translateX}  ${translateY} -0.23" rpy=" -1.57 0 0" />
         <parent link="base_link" />
-        <child link="front_${left_right}_wheel" />
+        <child link="${name}_caster_wheel" />
         <axis  xyz="0 0 1" />
 	<dynamics damping="0" friction="0"/>
     </joint>
 
-    <transmission name="trans_front_${left_right}_wheel">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="front_${left_right}_wheel_joint">
-        <!--hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface-->
-	<hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="motor_front_${left_right}_wheel">
-        <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
 
-    <gazebo reference="front_${left_right}_wheel">
+
+    <gazebo reference="${name}_caster_wheel">
         <gravity>true</gravity>
         <mu1>1</mu1>
         <mu2>1</mu2>
