@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <launch>
 	<arg name="task_period" default="0.004"/>
-	<arg name="new_gazebo_version" default="true"/>
+	<arg name="arm" default="false"/>
 
         <!-- send hyq urdf to param server -->
-        <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find tractor_description)/robots/tractor.urdf.xacro' task_period:=$(arg task_period) new_gazebo_version:=$(arg new_gazebo_version)"/>
+        <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find tractor_description)/robots/tractor.urdf.xacro' task_period:=$(arg task_period) arm:=$(arg arm)"/>
 
 
         <!-- send hyq semantic description srdf to param server -->

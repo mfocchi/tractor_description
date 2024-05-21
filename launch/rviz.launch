@@ -2,11 +2,13 @@
 <launch>
 
 	<arg name="rviz_conf" default="$(find tractor_description)/rviz/conf.rviz"/>
+	<arg name="arm" default="false"/>
 
 	<!-- send hyq urdf to param server and spawn it -->
 	<include file="$(find tractor_description)/launch/upload.launch">
+		<arg name="arm" value="$(arg arm)" />
 	</include>
-
+	
 	
 	<node pkg="tf" type="static_transform_publisher" name="world_broadcaster" args="0 0 0 0 0 0   /base_link /world  200"/>
 
