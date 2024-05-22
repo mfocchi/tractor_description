@@ -55,7 +55,7 @@
   <!--xacro:intel_realsense x="0.1" y="0.0" z="0.5"/-->
   
      <xacro:if value="$(arg sensors)">	
-          <xacro:VLP-16 parent="base_link" name="rslidar" topic="/$(arg robot_name)/lidar_points"
+          <xacro:VLP-16 parent="base_link" name="rslidar" topic="/lidar_points"
                 organize_cloud="true" hz="10" gpu="true">
     	  <origin xyz="0.0 0 0.3" rpy="0 0 0" />
   	</xacro:VLP-16>
