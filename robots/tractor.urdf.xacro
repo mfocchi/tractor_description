@@ -8,7 +8,7 @@
 	
 
 
-    <xacro:include filename="$(find myrobot_description)/gazebo/gazebo.urdf.xacro">
+    <xacro:include filename="$(find tractor_description)/gazebo/gazebo.urdf.xacro">
         <xacro:arg name="task_period" value="$(arg task_period)"/>
 	<xacro:arg name="robot_name" value="$(arg robot_name)"/>
     </xacro:include>
@@ -41,7 +41,7 @@
   
 
   <xacro:if value="$(arg arm)">
-   	<xacro:include filename="$(find z1_description)/xacro/z1_arm.xacro"/>
+   	<xacro:include filename="$(find z1_description)/urdfs/z1_arm.xacro"/>
 	<xacro:z1_arm parent="base_link">
 		<origin xyz="0 0 0.15" rpy="0 0 0"/>
 	</xacro:z1_arm>
