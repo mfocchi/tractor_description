@@ -25,6 +25,9 @@
     </material>
 
 
+   <xacro:arg name="base_offset" default="0.08"/>	
+
+
     <link name = "base_link">
     </link>
 
@@ -50,7 +53,7 @@
     </link>
 
     <joint name="chassis_joint" type="fixed">
-      <origin xyz="0 0.225 0" rpy="0 0 0" />
+      <origin xyz="$(arg base_offset) 0.225 0" rpy="0 0 0" />
       <parent link="base_link" />
       <child link="chassis" />
       <axis xyz="0 0 0" />
@@ -78,7 +81,7 @@
     </link>
 
     <joint name="ponte1_joint" type="fixed">
-      <origin xyz="0 0.225 0" rpy="0 0 0" />
+      <origin xyz="$(arg base_offset) 0.225 0" rpy="0 0 0" />
       <parent link="base_link" />
       <child link="ponte1" />
       <axis xyz="0 0 0" />
@@ -106,7 +109,7 @@
     </link>
 
     <joint name="cingolo1_joint" type="fixed">
-      <origin xyz="-0.094340414586262 -0.301388567 -0.100112309063136" rpy="1.5707963267949 0 3.14" />
+      <origin xyz="${$(arg base_offset) -0.094340414586262} -0.301388567 -0.100112309063136" rpy="1.5707963267949 0 3.14" />
       <parent link="base_link" />
       <child link="cingolo1" />
       <axis xyz="0 0 0" />
@@ -134,7 +137,7 @@
     </link>
 
     <joint name="supporto_ruote1_joint" type="fixed">
-      <origin xyz="-0.249653977391183 -0.353238567 -0.0779139783362333" rpy="-2.45232668596043 0 1.57" />
+      <origin xyz="${$(arg base_offset)-0.249653977391183} -0.353238567 -0.0779139783362333" rpy="-2.45232668596043 0 1.57" />
       <parent link="base_link" />
       <child link="supporto_ruote1" />
       <axis xyz="0 0 0" />
@@ -166,7 +169,7 @@
     </link>
 
     <joint name="sospensioni1_joint" type="fixed">
-      <origin xyz="0.115815637360445 -0.300738567 -0.0224356268106508" rpy="-1.91368272087089 0 -1.5707963267949" />
+      <origin xyz="${$(arg base_offset) + 0.115815637360445} -0.300738567 -0.0224356268106508" rpy="-1.91368272087089 0 -1.5707963267949" />
       <parent link="base_link" />
       <child link="sospensioni1" />
       <axis xyz="0 0 0" />
@@ -194,7 +197,7 @@
     </link>
 
     <joint name="assi1_joint" type="fixed">
-      <origin xyz="-0.399632572527583 -0.302738567 -0.131814051628503" rpy="-1.91580745395575 0 1.57" />
+      <origin xyz="${$(arg base_offset) -0.399632572527583} -0.302738567 -0.131814051628503" rpy="-1.91580745395575 0 1.57" />
       <parent link="base_link" />
       <child link="assi1" />
       <axis xyz="0 0 0" />
@@ -222,7 +225,7 @@
     </link>
 
     <joint name="ruote_folli1_joint" type="fixed">
-      <origin xyz="-0.399632572527583 -0.302738567 -0.131814051628503" rpy="-1.5707963267949 -1.29575751456647 3.14" />
+      <origin xyz="${$(arg base_offset)-0.399632572527583} -0.302738567 -0.131814051628503" rpy="-1.5707963267949 -1.29575751456647 3.14" />
       <parent link="base_link" />
       <child link="ruote_folli1" />
       <axis xyz="0 0 0" />
@@ -250,7 +253,7 @@
     </link>
 
     <joint name="ruota_motrice1_joint" type="fixed">
-      <origin xyz="-0.096734450942382 -0.286388567 0.087326977068925" rpy="-1.5707963267949 -1.22950532384837 3.14" />
+      <origin xyz="${$(arg base_offset)-0.096734450942382} -0.286388567 0.087326977068925" rpy="-1.5707963267949 -1.22950532384837 3.14" />
       <parent link="base_link" />
       <child link="ruota_motrice1" />
       <axis xyz="0 0 0" />
@@ -277,7 +280,7 @@
     </link>
 
     <joint name="ponte2_joint" type="fixed">
-      <origin xyz="0 0.225 0" rpy="0 0 0" />
+      <origin xyz="$(arg base_offset) 0.225 0" rpy="0 0 0" />
       <parent link="base_link" />
       <child link="ponte2" />
       <axis xyz="0 0 0" />
@@ -285,7 +288,7 @@
 
     <link name="cingolo2">
       <inertial>
-        <origin xyz="-0.0186478543961228 0.0173558435086227 -8.32667268468867E-17" rpy="0 0 0" />
+        <origin xyz="${$(arg base_offset)-0.0186478543961228} 0.0173558435086227 -8.32667268468867E-17" rpy="0 0 0" />
         <mass value="5.37116770201881" />
         <inertia ixx="0.119835058050815" ixy="0.0195379499468073" ixz="8.99361040190704E-17" iyy="0.414599681845954" iyz="3.60868166771734E-17" izz="0.519305950869416" />
       </inertial>
@@ -305,7 +308,7 @@
     </link>
 
     <joint name="cingolo2_joint"  type="fixed">
-      <origin xyz="-0.094340414586137 0.31585 -0.100112309063133" rpy="1.57079632679489 0 3.14" />
+      <origin xyz="${$(arg base_offset)-0.094340414586137} 0.31585 -0.100112309063133" rpy="1.57079632679489 0 3.14" />
       <parent link="base_link" />
       <child link="cingolo2" />
       <axis xyz="0 0 0" />
@@ -337,7 +340,7 @@
     </link>
 
     <joint name="sospensioni2_joint"  type="fixed">
-      <origin  xyz="0.115815637360568 0.3165 -0.022435626810643" rpy="-1.91368272087087 0 -1.5707963267949" />
+      <origin  xyz="${$(arg base_offset)+0.115815637360568} 0.3165 -0.022435626810643" rpy="-1.91368272087087 0 -1.5707963267949" />
       <parent link="base_link" />
       <child link="sospensioni2" />
       <axis xyz="0 0 0" />
@@ -365,7 +368,7 @@
     </link>
 
     <joint name="supporto_ruote2_joint" type="fixed">
-      <origin xyz="-0.249653977391059 0.264 -0.0779139783362343" rpy="-2.45232668596046 0 1.57" />
+      <origin xyz="${$(arg base_offset)-0.249653977391059} 0.264 -0.0779139783362343" rpy="-2.45232668596046 0 1.57" />
       <parent link="base_link" />
       <child link="supporto_ruote2" />
       <axis xyz="0 0 0" />
@@ -394,7 +397,7 @@
     </link>
 
     <joint  name="assi2_joint" type="fixed">
-      <origin xyz="-0.249653977391059 0.3145 -0.077913978336234" rpy="3.06127497605204 0 1.57" />
+      <origin xyz="${$(arg base_offset)-0.249653977391059} 0.3145 -0.077913978336234" rpy="3.06127497605204 0 1.57" />
       <parent link="base_link" />
       <child link="assi2" />
       <axis xyz="0 0 0" />
@@ -422,7 +425,7 @@
     </link>
 
     <joint name="ruote_folli2_joint" type="fixed">
-      <origin xyz="-0.382705304353283 0.2915 -0.127037337056396" rpy="-1.5707963267949 -1.29575751456645 3.14" />
+      <origin xyz="${$(arg base_offset)-0.382705304353283} 0.2915 -0.127037337056396" rpy="-1.5707963267949 -1.29575751456645 3.14" />
       <parent link="base_link" />
       <child link="ruote_folli2" />
       <axis xyz="0 0 0" />
@@ -450,7 +453,7 @@
     </link>
 
     <joint name="ruota_motrice2_joint" type="fixed">
-      <origin  xyz="-0.360511711109277 0.275382964 -0.041159329235658" rpy="1.5707963267949 0 0" />
+      <origin  xyz="${$(arg base_offset)-0.360511711109277} 0.275382964 -0.041159329235658" rpy="1.5707963267949 0 0" />
       <parent link="base_link" />
       <child link="ruota_motrice2" />
       <axis xyz="0 0 0" />
