@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <launch>
-	<arg name="robot_name1"  default="tractor" />
+	<arg name="robot_name1"  default="tractor0" />
 	<arg name="robot_name2"  default="tractor1" />
 	<arg name="robot_name3"  default="tractor2" />
 	<arg name="robot_name4"  default="tractor3" />
