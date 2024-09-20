@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <launch>
 	<arg name="task_period" default="0.004"/>
+	<arg name="load_force_sensors" default="false"/>
 	<arg name="arm" default="false"/>
 
         <!-- send hyq urdf to param server -->
