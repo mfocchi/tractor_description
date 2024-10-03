@@ -1,0 +1,15 @@
+<launch>
+    <param name="orchard_geom" command="$(find xacro)/xacro --inorder '$(find cpr_orchard_gazebo)/urdf/orchard_geometry.urdf.xacro'" />
+
+   
+    <arg name="world_x" default="-16.5"/>
+    <arg name="world_y" default="-16"/>
+    <arg name="world_z" default="0.0"/>
+    <arg name="world_yaw" default="-1.57"/>
+
+  
+    <node name="orchard_gazebo_spawner" pkg="gazebo_ros" type="spawn_model"
+      args="-urdf -model orchard_geometry -param orchard_geom -x $(arg world_x) -y $(arg world_y) -z $(arg world_z) -Y $(arg world_yaw)" />
+
+
+</launch>
