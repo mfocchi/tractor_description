@@ -183,7 +183,7 @@ TebLocalPlannerROS:
   weight_acc_lim_theta: 1
   weight_kinematics_nh: 10 # is a nonholonomic robot
   weight_kinematics_forward_drive: 50 # prefer forward driving, for differential
-  weight_kinematics_turning_radius: 1 # prefer turns that respect the min_turning_radius, not used if differential (min_turning_radius = 0)
+  weight_kinematics_turning_radius: 0 # prefer turns that respect the min_turning_radius, not used if differential (min_turning_radius = 0)
   weight_optimaltime: 10 # prefer trajectories with less transition time
   weight_obstacle: 50 # prefer trajectories that respect the min_obstacle_dist
   weight_inflation: 1 # prefer trajectories that respect the inflation of the obstacles

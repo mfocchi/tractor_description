@@ -46,8 +46,8 @@
                <updateRate>40</updateRate>
                <robotNamespace>/</robotNamespace>
                <bodyName>gps_link</bodyName>
-               <topicName>robot/fix</topicName>
-               <velocityTopicName>robot/vel</velocityTopicName>
+               <topicName>/gps/fix</topicName>
+               <velocityTopicName>/gps/vel</velocityTopicName>
                <referenceLatitude>40.0599536</referenceLatitude>
                <referenceLongitude>18.3458069</referenceLongitude>
                <referenceHeading>0</referenceHeading>
