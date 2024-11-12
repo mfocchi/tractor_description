@@ -13,6 +13,7 @@ Panels:
         - /TF1
         - /TF1/Frames1
         - /TF1/Tree1
+        - /MarkerArray3
       Splitter Ratio: 0.6178160905838013
     Tree Height: 859
   - Class: rviz/Selection
@@ -41,7 +42,7 @@ Toolbars:
 Visualization Manager:
   Class: ""
   Displays:
-    - Alpha: 0.5
+    - Alpha: 0.6000000238418579
       Cell Size: 0.0010000000474974513
       Class: rviz/Grid
       Color: 160; 160; 164
@@ -59,7 +60,7 @@ Visualization Manager:
       Plane Cell Count: 10000
       Reference Frame: world
       Value: true
-    - Alpha: 1
+    - Alpha: 0.5
       Class: rviz/RobotModel
       Collision Enabled: false
       Enabled: true
@@ -206,56 +207,12 @@ Visualization Manager:
       Queue Size: 100
       Value: true
     - Class: rviz/TF
-      Enabled: true
+      Enabled: false
       Filter (blacklist): ""
       Filter (whitelist): ""
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        assi1:
-          Value: false
-        assi2:
-          Value: false
-        base_link:
-          Value: true
-        chassis:
-          Value: false
-        cingolo1:
-          Value: false
-        cingolo2:
-          Value: false
-        front_left_wheel:
-          Value: true
-        front_right_wheel:
-          Value: true
-        gps_link:
-          Value: true
-        ponte1:
-          Value: false
-        ponte2:
-          Value: false
-        rslidar:
-          Value: true
-        rslidar_base_link:
-          Value: true
-        ruota_motrice1:
-          Value: false
-        ruota_motrice2:
-          Value: false
-        ruote_folli1:
-          Value: false
-        ruote_folli2:
-          Value: false
-        sospensioni1:
-          Value: false
-        sospensioni2:
-          Value: false
-        supporto_ruote1:
-          Value: false
-        supporto_ruote2:
-          Value: false
-        world:
-          Value: false
       Marker Alpha: 1
       Marker Scale: 1
       Name: TF
@@ -263,48 +220,16 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        world:
-          base_link:
-            assi1:
-              {}
-            assi2:
-              {}
-            chassis:
-              {}
-            cingolo1:
-              {}
-            cingolo2:
-              {}
-            front_left_wheel:
-              {}
-            front_right_wheel:
-              {}
-            gps_link:
-              {}
-            ponte1:
-              {}
-            ponte2:
-              {}
-            rslidar_base_link:
-              rslidar:
-                {}
-            ruota_motrice1:
-              {}
-            ruota_motrice2:
-              {}
-            ruote_folli1:
-              {}
-            ruote_folli2:
-              {}
-            sospensioni1:
-              {}
-            sospensioni2:
-              {}
-            supporto_ruote1:
-              {}
-            supporto_ruote2:
-              {}
+        {}
       Update Interval: 0
+      Value: false
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /mesh
+      Name: MarkerArray
+      Namespaces:
+        {}
+      Queue Size: 100
       Value: true
   Enabled: true
   Global Options:
@@ -334,7 +259,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 19.238414764404297
+      Distance: 8.655464172363281
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -350,9 +275,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5457154512405396
+      Pitch: 0.02479681558907032
       Target Frame: base_link
-      Yaw: 3.98432993888855
+      Yaw: 5.339334011077881
     Saved:
       - Class: rviz/ThirdPersonFollower
         Distance: 2.606315851211548
@@ -390,5 +315,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1850
-  X: 70
-  Y: 209
+  X: 889
+  Y: 53
