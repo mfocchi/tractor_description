@@ -9,11 +9,6 @@
     <xacro:property name="mass" value="4" />
 
     <link name="front_${left_right}_wheel">
-       <visual>
-            <geometry>
-                <cylinder radius="${radius}" length="${length}" />
-            </geometry>
-        </visual>  
         <collision>
             <geometry>
                 <cylinder radius="${radius}" length="${length}" />

@@ -46,7 +46,7 @@ Visualization Manager:
       Cell Size: 0.0010000000474974513
       Class: rviz/Grid
       Color: 160; 160; 164
-      Enabled: true
+      Enabled: false
       Line Style:
         Line Width: 0.029999999329447746
         Value: Lines
@@ -59,8 +59,8 @@ Visualization Manager:
       Plane: XY
       Plane Cell Count: 10000
       Reference Frame: world
-      Value: true
-    - Alpha: 0.5
+      Value: false
+    - Alpha: 0.10000000149011612
       Class: rviz/RobotModel
       Collision Enabled: false
       Enabled: true
@@ -203,32 +203,112 @@ Visualization Manager:
       Marker Topic: /vis
       Name: MarkerArray
       Namespaces:
-        {}
+        "": true
       Queue Size: 100
       Value: true
     - Class: rviz/TF
-      Enabled: false
+      Enabled: true
       Filter (blacklist): ""
       Filter (whitelist): ""
       Frame Timeout: 15
       Frames:
         All Enabled: false
+        assi1:
+          Value: false
+        assi2:
+          Value: false
+        base_link:
+          Value: true
+        chassis:
+          Value: false
+        cingolo1:
+          Value: false
+        cingolo2:
+          Value: false
+        gps_link:
+          Value: false
+        horizontal_frame:
+          Value: true
+        ponte1:
+          Value: false
+        ponte2:
+          Value: false
+        rslidar:
+          Value: false
+        rslidar_base_link:
+          Value: false
+        ruota_motrice1:
+          Value: false
+        ruota_motrice2:
+          Value: false
+        ruote_folli1:
+          Value: false
+        ruote_folli2:
+          Value: false
+        sospensioni1:
+          Value: false
+        sospensioni2:
+          Value: false
+        supporto_ruote1:
+          Value: false
+        supporto_ruote2:
+          Value: false
+        world:
+          Value: false
       Marker Alpha: 1
       Marker Scale: 1
       Name: TF
       Show Arrows: false
       Show Axes: true
-      Show Names: true
+      Show Names: false
       Tree:
-        {}
+        world:
+          base_link:
+            assi1:
+              {}
+            assi2:
+              {}
+            chassis:
+              {}
+            cingolo1:
+              {}
+            cingolo2:
+              {}
+            gps_link:
+              {}
+            ponte1:
+              {}
+            ponte2:
+              {}
+            rslidar_base_link:
+              rslidar:
+                {}
+            ruota_motrice1:
+              {}
+            ruota_motrice2:
+              {}
+            ruote_folli1:
+              {}
+            ruote_folli2:
+              {}
+            sospensioni1:
+              {}
+            sospensioni2:
+              {}
+            supporto_ruote1:
+              {}
+            supporto_ruote2:
+              {}
+          horizontal_frame:
+            {}
       Update Interval: 0
-      Value: false
+      Value: true
     - Class: rviz/MarkerArray
       Enabled: true
       Marker Topic: /mesh
       Name: MarkerArray
       Namespaces:
-        {}
+        "": true
       Queue Size: 100
       Value: true
   Enabled: true
@@ -259,7 +339,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 8.655464172363281
+      Distance: 2.0850863456726074
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -275,9 +355,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.02479681558907032
+      Pitch: 0.339796245098114
       Target Frame: base_link
-      Yaw: 5.339334011077881
+      Yaw: 4.019348621368408
     Saved:
       - Class: rviz/ThirdPersonFollower
         Distance: 2.606315851211548
@@ -315,5 +395,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1850
-  X: 889
-  Y: 53
+  X: 1094
+  Y: 27

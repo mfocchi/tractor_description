@@ -9,11 +9,6 @@
     <xacro:property name="mass" value="0.5" />
 
     <link name="${name}_caster_wheel">
-       <visual>
-            <geometry>
-                <cylinder radius="${radius}" length="${length}" />
-            </geometry>
-        </visual>  
         <collision>
             <geometry>
                 <cylinder radius="${radius}" length="${length}" />
